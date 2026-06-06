@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{% block title %}Abo 7gag | From Nothing to All{% endblock %}</title>
+    <meta name="description" content="{% block description %}I build fast, secure, and scalable web solutions — from full websites to powerful APIs. From nothing to all.{% endblock %}">
+    <meta name="keywords" content="flask developer, python developer, api development, web development, secure backend, freelance developer">
+    <meta name="author" content="Abo 7gag">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abo7gag-web.up.railway.app{% block og_url %}/{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Abo 7gag | From Nothing to All{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}I build fast, secure, and scalable web solutions. From nothing to all.{% endblock %}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{% block twitter_title %}Abo 7gag | From Nothing to All{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}I build fast, secure, and scalable web solutions. From nothing to all.{% endblock %}">
+
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/iconic2.png') }}">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap');
-
         * { font-family: 'JetBrains Mono', monospace; }
-
         body { background-color: #0a0a0a; }
-
         .green { color: #00ff41; }
         .green-border { border-color: #00ff41; }
-
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
@@ -26,7 +39,6 @@
             animation: blink 1s infinite;
             margin-left: 4px;
         }
-
         @keyframes scanline {
             0% { transform: translateY(-100%); }
             100% { transform: translateY(100vh); }
@@ -42,11 +54,9 @@
             pointer-events: none;
             z-index: 9999;
         }
-
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: #0a0a0a; }
         ::-webkit-scrollbar-thumb { background: #00ff41; }
-
         .card {
             background: #111111;
             border: 1px solid #1a1a1a;
