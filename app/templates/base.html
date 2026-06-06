@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Abo 7gag | From Nothing to All{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/iconic2.png') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap');
@@ -76,9 +77,11 @@ document.addEventListener('click', function(e) {
 
     <!-- Navbar -->
     <nav class="border-b border-gray-900 px-8 py-4 flex justify-between items-center sticky top-0 z-50" style="background:#0a0a0a;">
-        <a href="/" class="text-lg font-bold">
-            <span class="green">~</span>/abo7gag<span class="green">$</span>
-        </a>
+        <a href="/" class="text-lg font-bold flex items-center gap-3">
+    <img src="{{ url_for('static', filename='img/iconic1.png') }}" 
+         class="w-8 h-8 rounded" alt="logo">
+    <span><span class="green">~</span>/abo7gag<span class="green">$</span></span>
+</a>
         <ul class="flex gap-8 text-sm text-gray-500">
             <li><a href="/" class="hover:text-green-400 transition hover:green">./home</a></li>
             <li class="relative" id="services-menu">
