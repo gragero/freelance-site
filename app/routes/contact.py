@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
+import os
 import resend
 
-resend.api_key = "re_C8oHBbBa_3c6HniiBdJ9AcNSStitnA3eU"  
+resend.api_key = os.environ.get("RESEND_API_KEY")
 
 contact_bp = Blueprint("contact", __name__)
 
