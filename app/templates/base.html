@@ -77,11 +77,14 @@ document.addEventListener('click', function(e) {
 
     <!-- Navbar -->
     <nav class="border-b border-gray-900 px-8 py-4 flex justify-between items-center sticky top-0 z-50" style="background:#0a0a0a;">
-        <a href="/" class="flex flex-col items-center gap-1">
-    <img src="{{ url_for('static', filename='img/iconic1.png') }}" 
-         class="w-16 h-16 rounded" alt="logo">
-    <span class="text-sm"><span class="green">~</span>/abo7gag<span class="green">$</span></span>
-</a>
+        <a href="/" class="text-lg font-bold">
+            <span class="green">~</span>/abo7gag<span class="green">$</span>
+        </a>
+
+      <!--  <img src="{{ url_for('static', filename='img/iconic1.png') }}" 
+     class="rounded" 
+     style="width:200px; height:35px; object-fit:cover; object-position:center;">-->
+
         <ul class="flex gap-8 text-sm text-gray-500">
             <li><a href="/" class="hover:text-green-400 transition hover:green">./home</a></li>
             <li class="relative" id="services-menu">
