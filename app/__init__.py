@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from .extensions import mail
 from .routes.home import home_bp
 from .routes.services import services_bp
@@ -17,5 +17,9 @@ def create_app():
     app.register_blueprint(portfolio_bp)
     app.register_blueprint(contact_bp)
     app.register_blueprint(consulting_bp)
+
+    @app.errorhandler(404)
+    def not_found(e):
+        return render_template("404.html"), 404
 
     return app
