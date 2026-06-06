@@ -1,4 +1,4 @@
-# abo7gag — From Nothing to All 🖥️
+# abo7gag — From Nothing to All 
 
 > "Your idea. My code. From nothing to all."
 
@@ -54,4 +54,4 @@ HOW?... ask gpt
 
 ---
 
-*Built with ☕ and a will stronger than the warehouse shift*
+*Built with COFFEE and a will stronger than the warehouse shift*
