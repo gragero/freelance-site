@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from flask_mail import Message
-from app.extensions import mail
+import resend
+
+resend.api_key = "re_C8oHBbBa_3c6HniiBdJ9AcNSStitnA3eU"  
 
 contact_bp = Blueprint("contact", __name__)
 
@@ -13,24 +14,20 @@ def index():
         budget = request.form.get("budget")
         message = request.form.get("message")
 
-        msg = Message(
-            subject=f"New Contact: {service} — {name}",
-            recipients=["thewonderfuljo80@gmail.com"],
-            body=f"""
-New message from your portfolio:
-
-Name:    {name}
-Email:   {email}
-Service: {service}
-Budget:  {budget}
-
-Message:
-{message}
-            """
-        )
-
         try:
-            mail.send(msg)
+            resend.Emails.send({
+                "from": "onboarding@resend.dev",
+                "to": "thewonderfuljo80@gmail.com",
+                "subject": f"New Contact: {service} — {name}",
+                "html": f"""
+                    <h2>New message from your portfolio</h2>
+                    <p><b>Name:</b> {name}</p>
+                    <p><b>Email:</b> {email}</p>
+                    <p><b>Service:</b> {service}</p>
+                    <p><b>Budget:</b> {budget}</p>
+                    <p><b>Message:</b><br>{message}</p>
+                """
+            })
             flash("success", "success")
         except Exception as e:
             flash("error", "error")
