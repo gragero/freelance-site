@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Abo 7gag{% endblock %}
+
+{% block content %}
+
+<section class="px-8 md:px-24 py-24 max-w-3xl">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> contact.init()</p>
+    <h1 class="text-4xl font-black text-white mb-4">Let's talk</h1>
+    <p class="text-gray-600 text-sm mb-16">// Got a project? An idea? A problem? I'm listening.</p>
+
+    <!-- Form -->
+    <div class="card rounded-lg p-10">
+        <p class="text-xs text-gray-600 mb-8">// Fill the form — I'll reply within 24h</p>
+
+        <form method="POST" action="/contact">
+
+            <!-- Name -->
+            <div class="mb-6">
+                <label class="text-xs text-gray-500 block mb-2">
+                    <span style="color:#00ff41;">></span> your_name
+                </label>
+                <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="John Doe"
+                    class="w-full px-4 py-3 text-sm text-white rounded outline-none transition focus:border-green-400"
+                    style="background:#0a0a0a; border:1px solid #1a1a1a; font-family:'JetBrains Mono',monospace;"
+                >
+            </div>
+
+            <!-- Email -->
+            <div class="mb-6">
+                <label class="text-xs text-gray-500 block mb-2">
+                    <span style="color:#00ff41;">></span> your_email
+                </label>
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="john@example.com"
+                    class="w-full px-4 py-3 text-sm text-white rounded outline-none transition focus:border-green-400"
+                    style="background:#0a0a0a; border:1px solid #1a1a1a; font-family:'JetBrains Mono',monospace;"
+                >
+            </div>
+
+            <!-- Service -->
+            <div class="mb-6">
+                <label class="text-xs text-gray-500 block mb-2">
+                    <span style="color:#00ff41;">></span> service_needed
+                </label>
+                <select
+                    name="service"
+                    class="w-full px-4 py-3 text-sm text-white rounded outline-none transition"
+                    style="background:#0a0a0a; border:1px solid #1a1a1a; font-family:'JetBrains Mono',monospace;"
+                >
+                    <option value="">-- select service --</option>
+                    <option value="web">Web Development</option>
+                    <option value="api">API Development</option>
+                    <option value="translation">Website Translation</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Budget -->
+            <div class="mb-6">
+                <label class="text-xs text-gray-500 block mb-2">
+                    <span style="color:#00ff41;">></span> budget_range
+                </label>
+                <select
+                    name="budget"
+                    class="w-full px-4 py-3 text-sm text-white rounded outline-none transition"
+                    style="background:#0a0a0a; border:1px solid #1a1a1a; font-family:'JetBrains Mono',monospace;"
+                >
+                    <option value="">-- select budget --</option>
+                    <option value="small">$100 - $500</option>
+                    <option value="medium">$500 - $1,500</option>
+                    <option value="large">$1,500 - $5,000</option>
+                    <option value="enterprise">$5,000+</option>
+                </select>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-8">
+                <label class="text-xs text-gray-500 block mb-2">
+                    <span style="color:#00ff41;">></span> your_message
+                </label>
+                <textarea
+                    name="message"
+                    required
+                    rows="6"
+                    placeholder="// Describe your project..."
+                    class="w-full px-4 py-3 text-sm text-white rounded outline-none transition resize-none"
+                    style="background:#0a0a0a; border:1px solid #1a1a1a; font-family:'JetBrains Mono',monospace;"
+                ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="w-full py-4 text-sm font-black transition hover:opacity-90"
+                style="background:#00ff41; color:#0a0a0a;">
+                $ ./send_message
+            </button>
+
+        </form>
+    </div>
+</section>
+
+<!-- Direct Contact -->
+<section class="px-8 md:px-24 py-16 border-t border-gray-900">
+    <p class="text-gray-600 text-xs mb-8"><span style="color:#00ff41;">#</span> // prefer direct contact?</p>
+    <div class="flex gap-8 flex-wrap">
+        <a href="mailto:thewonderfuljo80@gmail.com"
+           class="text-sm hover:text-green-400 transition"
+           style="color:#404040;">
+            <span style="color:#00ff41;">></span> email: thewonderfuljo80@gmail.com
+        </a>
+        <a href="https://github.com/AboHgegA" target="_blank"
+           class="text-sm hover:text-green-400 transition"
+           style="color:#404040;">
+            <span style="color:#00ff41;">></span> github: AboHgegA
+        </a>
+        <a href="https://github.com/gragero" target="_blank"
+           class="text-sm hover:text-green-400 transition"
+           style="color:#404040;">
+            <span style="color:#00ff41;">></span> github: gragero
+        </a>
+    </div>
+</section>
+
+{% endblock %}

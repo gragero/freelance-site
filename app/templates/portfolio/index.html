@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio | Abo 7gag{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="px-8 md:px-24 py-24">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> portfolio.load()</p>
+    <h1 class="text-4xl font-black text-white mb-4">What I've built</h1>
+    <p class="text-gray-600 text-sm">// Real projects. Real code. No tutorials.</p>
+</section>
+
+<!-- Projects -->
+<section class="px-8 md:px-24 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- OJclicks OS -->
+    <div class="card rounded-lg p-8">
+        <div class="flex justify-between items-start mb-4">
+            <p class="text-xs text-gray-600">01.</p>
+            <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">C · x86 ASM</span>
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">OJclicks OS</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Custom bare-metal operating system built from scratch. Includes hardware abstraction layers, custom ISRs, PIC remap module, VGA text-mode driver, and full QEMU/GDB debug harness.
+        </p>
+        <div class="flex gap-3">
+            <a href="https://github.com/AboHgegA" target="_blank"
+               class="text-xs px-4 py-2 transition hover:text-green-400"
+               style="border:1px solid #1a1a1a; color:#404040;">
+                $ ./view_code
+            </a>
+        </div>
+    </div>
+
+    <!-- ojcsh -->
+    <div class="card rounded-lg p-8">
+        <div class="flex justify-between items-start mb-4">
+            <p class="text-xs text-gray-600">02.</p>
+            <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">C · POSIX · AUR</span>
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">ojcsh</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            High-performance POSIX-compliant Unix shell with multiprocess lifecycle management, tokenizing lexer, pipe architecture, and IPC pipeline structures.
+        </p>
+        <!-- Stats -->
+        <div class="flex gap-6 mb-6">
+            <div>
+                <p class="text-xs text-gray-600">releases</p>
+                <p class="text-xl font-black" style="color:#00ff41;">7</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600">stars</p>
+                <p class="text-xl font-black" style="color:#00ff41;">4</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600">forks</p>
+                <p class="text-xl font-black" style="color:#00ff41;">1</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600">AUR downloads</p>
+                <p class="text-xl font-black" style="color:#00ff41;">3</p>
+            </div>
+        </div>
+        <div class="flex gap-3">
+            <a href="https://github.com/gragero/OJC-shell" target="_blank"
+               class="text-xs px-4 py-2 transition hover:text-green-400"
+               style="border:1px solid #1a1a1a; color:#404040;">
+                $ ./view_code
+            </a>
+            <a href="https://aur.archlinux.org/account/abohgega" target="_blank"
+               class="text-xs px-4 py-2 transition hover:text-green-400"
+               style="border:1px solid #1a1a1a; color:#404040;">
+                $ ./view_aur
+            </a>
+        </div>
+    </div>
+
+    <!-- x86 Bootloader -->
+    <div class="card rounded-lg p-8">
+        <div class="flex justify-between items-start mb-4">
+            <p class="text-xs text-gray-600">03.</p>
+            <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">NASM · BIOS · x86</span>
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">x86 Bare-Metal Bootloader</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Fully compliant 16-bit MBR bootloader within 512 bytes. Custom GDT, A20 line activation, Real Mode to Protected Mode transition, and long-jump pipeline flush into 32-bit execution.
+        </p>
+        <div class="flex gap-3">
+            <a href="https://github.com/AboHgegA" target="_blank"
+               class="text-xs px-4 py-2 transition hover:text-green-400"
+               style="border:1px solid #1a1a1a; color:#404040;">
+                $ ./view_code
+            </a>
+        </div>
+    </div>
+
+    <!-- Shield/Sentinel -->
+    <div class="card rounded-lg p-8">
+        <div class="flex justify-between items-start mb-4">
+            <p class="text-xs text-gray-600">04.</p>
+            <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">Python · Flask · Security</span>
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">Shield / Sentinel</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Intelligent web threat detection engine. Real-time brute-force detection, SQLi/XSS pattern matching, rate limiting, and async admin alert pipeline for anomalous IP behavior.
+        </p>
+        <div class="flex gap-3">
+            <a href="https://github.com/AboHgegA" target="_blank"
+               class="text-xs px-4 py-2 transition hover:text-green-400"
+               style="border:1px solid #1a1a1a; color:#404040;">
+                $ ./view_code
+            </a>
+        </div>
+    </div>
+
+    <!-- Laravel API -->
+    <div class="card rounded-lg p-8 md:col-span-2">
+        <div class="flex justify-between items-start mb-4">
+            <p class="text-xs text-gray-600">05.</p>
+            <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">PHP · Laravel · Sanctum</span>
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">Laravel Headless REST API</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6 max-w-2xl">
+            Decoupled headless API engine with form request validation, eager-loading optimization, and transaction-safe migrations. Secured via Sanctum tokenized auth with middleware access restrictions and global exception tracking.
+        </p>
+        <div class="flex gap-3">
+            <a href="https://github.com/gragero" target="_blank"
+               class="text-xs px-4 py-2 transition hover:text-green-400"
+               style="border:1px solid #1a1a1a; color:#404040;">
+                $ ./view_code
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- GitHub CTA -->
+<section class="px-8 md:px-24 py-16 border-t border-gray-900 text-center">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> github.open()</p>
+    <h2 class="text-2xl font-black text-white mb-4">See everything on GitHub</h2>
+    <p class="text-gray-600 text-sm mb-8">// More projects, more code, more chaos</p>
+    <div class="flex gap-4 justify-center">
+        <a href="https://github.com/AboHgegA" target="_blank"
+           class="px-8 py-3 text-sm font-bold transition inline-block"
+           style="background:#00ff41; color:#0a0a0a;">
+            $ ./github_AboHgegA
+        </a>
+        <a href="https://github.com/gragero" target="_blank"
+           class="px-8 py-3 text-sm font-bold transition inline-block"
+           style="border:1px solid #1a1a1a; color:#404040;">
+            $ ./github_gragero
+        </a>
+    </div>
+</section>
+
+{% endblock %}

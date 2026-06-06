@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Web Development | Abo 7gag{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="px-8 md:px-24 py-24">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> services.web_dev.init()</p>
+    <h1 class="text-4xl font-black text-white mb-4">Web Development</h1>
+    <p class="text-gray-600 text-sm max-w-xl leading-relaxed">
+        // From zero to a full working website.<br>
+        // Fast, clean, and built to scale.
+    </p>
+</section>
+
+<!-- What you get -->
+<section class="px-8 md:px-24 pb-24">
+    <p class="text-gray-600 text-xs mb-12"><span style="color:#00ff41;">#</span> package.includes()</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">01.</p>
+            <h3 class="text-lg font-black text-white mb-3">Full Stack Website</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Frontend + backend built together. Clean UI, solid server, real database — everything connected and working.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">02.</p>
+            <h3 class="text-lg font-black text-white mb-3">Responsive Design</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Looks perfect on every screen — desktop, tablet, mobile. No compromises.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">03.</p>
+            <h3 class="text-lg font-black text-white mb-3">Security Built-in</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Every site I build has protection from day one — XSS, SQLi, CSRF, brute force. Not optional.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">04.</p>
+            <h3 class="text-lg font-black text-white mb-3">Clean Codebase</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Code you can actually read, maintain, and build on. No spaghetti, no shortcuts.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Stack -->
+    <p class="text-gray-600 text-xs mb-8"><span style="color:#00ff41;">#</span> tech.stack()</p>
+    <div class="card rounded-lg p-8 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+                <p class="text-xs text-gray-600 mb-2">backend</p>
+                <p class="text-white text-sm font-black">Python / Flask</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600 mb-2">frontend</p>
+                <p class="text-white text-sm font-black">HTML / Tailwind</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600 mb-2">database</p>
+                <p class="text-white text-sm font-black">SQLite / PostgreSQL</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600 mb-2">security</p>
+                <p class="text-white text-sm font-black">Custom Middleware</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Process -->
+    <p class="text-gray-600 text-xs mb-8"><span style="color:#00ff41;">#</span> process.steps()</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+        <div class="border-l-2 pl-6" style="border-color:#00ff41;">
+            <p class="text-xs text-gray-600 mb-2">step_01</p>
+            <h4 class="text-white font-black mb-2">Brief</h4>
+            <p class="text-gray-600 text-sm">You tell me what you need. I ask the right questions.</p>
+        </div>
+        <div class="border-l-2 pl-6" style="border-color:#00ff41;">
+            <p class="text-xs text-gray-600 mb-2">step_02</p>
+            <h4 class="text-white font-black mb-2">Plan</h4>
+            <p class="text-gray-600 text-sm">I map out the structure, stack, and timeline.</p>
+        </div>
+        <div class="border-l-2 pl-6" style="border-color:#00ff41;">
+            <p class="text-xs text-gray-600 mb-2">step_03</p>
+            <h4 class="text-white font-black mb-2">Build</h4>
+            <p class="text-gray-600 text-sm">I build it. You get updates. No disappearing acts.</p>
+        </div>
+        <div class="border-l-2 pl-6" style="border-color:#00ff41;">
+            <p class="text-xs text-gray-600 mb-2">step_04</p>
+            <h4 class="text-white font-black mb-2">Deliver</h4>
+            <p class="text-gray-600 text-sm">Clean handoff. Full code. Deployed and running.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="card rounded-lg p-10 text-center">
+        <p class="text-gray-600 text-xs mb-4"><span style="color:#00ff41;">#</span> ready.to.build()</p>
+        <h2 class="text-2xl font-black text-white mb-4">Let's build your website</h2>
+        <p class="text-gray-600 text-sm mb-8">// Tell me about your project — I'll get back within 24h</p>
+        <a href="/contact"
+           class="px-10 py-4 text-sm font-black transition inline-block hover:opacity-90"
+           style="background:#00ff41; color:#0a0a0a;">
+            $ ./start_project
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}

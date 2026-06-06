@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Consulting | Abo 7gag{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="px-8 md:px-24 py-24">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> consulting.init()</p>
+    <h1 class="text-4xl font-black text-white mb-4">Consulting</h1>
+    <p class="text-gray-600 text-sm max-w-xl leading-relaxed">
+        // You don't always need someone to build for you.<br>
+        // Sometimes you just need the right answer.
+    </p>
+</section>
+
+<!-- What I offer -->
+<section class="px-8 md:px-24 pb-24">
+    <p class="text-gray-600 text-xs mb-12"><span style="color:#00ff41;">#</span> services.list()</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">01.</p>
+            <h3 class="text-lg font-black text-white mb-3">Architecture Review</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Got an existing project? I'll review your architecture, find bottlenecks, and tell you exactly what needs to change.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">02.</p>
+            <h3 class="text-lg font-black text-white mb-3">Security Audit</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                I'll scan your API or web app for vulnerabilities — SQLi, XSS, brute force vectors, broken auth — and give you a full report.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">03.</p>
+            <h3 class="text-lg font-black text-white mb-3">Tech Stack Advice</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Not sure what to build with? I'll analyze your requirements and give you an honest recommendation — no bias, no upselling.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">04.</p>
+            <h3 class="text-lg font-black text-white mb-3">Code Review</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Send me your codebase. I'll go through it line by line and tell you what's wrong, what's right, and what needs to be rewritten.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- How it works -->
+    <p class="text-gray-600 text-xs mb-8"><span style="color:#00ff41;">#</span> process.steps()</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+
+        <div class="border-l-2 pl-6" style="border-color:#00ff41;">
+            <p class="text-xs text-gray-600 mb-2">step_01</p>
+            <h4 class="text-white font-black mb-2">You reach out</h4>
+            <p class="text-gray-600 text-sm">Tell me what you need. Be specific — the more detail, the better.</p>
+        </div>
+
+        <div class="border-l-2 pl-6" style="border-color:#00ff41;">
+            <p class="text-xs text-gray-600 mb-2">step_02</p>
+            <h4 class="text-white font-black mb-2">We align</h4>
+            <p class="text-gray-600 text-sm">Quick call or chat to understand your problem and define the scope.</p>
+        </div>
+
+        <div class="border-l-2 pl-6" style="border-color:#00ff41;">
+            <p class="text-xs text-gray-600 mb-2">step_03</p>
+            <h4 class="text-white font-black mb-2">You get answers</h4>
+            <p class="text-gray-600 text-sm">Detailed report or session — clear, direct, actionable. No fluff.</p>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="card rounded-lg p-10 text-center">
+        <p class="text-gray-600 text-xs mb-4"><span style="color:#00ff41;">#</span> ready?</p>
+        <h2 class="text-2xl font-black text-white mb-4">Book a free 15-min call</h2>
+        <p class="text-gray-600 text-sm mb-8">// No commitment. Just a conversation.</p>
+        <a href="/contact"
+           class="px-10 py-4 text-sm font-black transition inline-block hover:opacity-90"
+           style="background:#00ff41; color:#0a0a0a;">
+            $ ./book_now
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}

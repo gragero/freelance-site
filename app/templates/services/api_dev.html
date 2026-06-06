@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}API Development | Abo 7gag{% endblock %}
+
+{% block content %}
+
+<section class="px-8 md:px-24 py-24">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> services.api.init()</p>
+    <h1 class="text-4xl font-black text-white mb-4">API Development</h1>
+    <p class="text-gray-600 text-sm max-w-xl leading-relaxed">
+        // Secure, fast, and well-documented REST APIs.<br>
+        // Built with security as a first-class citizen.
+    </p>
+</section>
+
+<section class="px-8 md:px-24 pb-24">
+    <p class="text-gray-600 text-xs mb-12"><span style="color:#00ff41;">#</span> package.includes()</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">01.</p>
+            <h3 class="text-lg font-black text-white mb-3">REST API Design</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Clean endpoints, proper HTTP methods, consistent responses. APIs that developers actually enjoy using.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">02.</p>
+            <h3 class="text-lg font-black text-white mb-3">Authentication & Auth</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                JWT, token-based auth, role permissions. Your data stays yours.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">03.</p>
+            <h3 class="text-lg font-black text-white mb-3">Security Layer</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Rate limiting, brute force detection, SQLi/XSS prevention, IP monitoring. Built-in, not bolted on.
+            </p>
+        </div>
+
+        <div class="card rounded-lg p-8">
+            <p class="text-xs text-gray-600 mb-4">04.</p>
+            <h3 class="text-lg font-black text-white mb-3">Full Documentation</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Every endpoint documented. Your team won't waste time guessing how things work.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Stack -->
+    <p class="text-gray-600 text-xs mb-8"><span style="color:#00ff41;">#</span> tech.stack()</p>
+    <div class="card rounded-lg p-8 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+                <p class="text-xs text-gray-600 mb-2">framework</p>
+                <p class="text-white text-sm font-black">Flask / Python</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600 mb-2">auth</p>
+                <p class="text-white text-sm font-black">JWT / Tokens</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600 mb-2">database</p>
+                <p class="text-white text-sm font-black">SQLite / PostgreSQL</p>
+            </div>
+            <div>
+                <p class="text-xs text-gray-600 mb-2">security</p>
+                <p class="text-white text-sm font-black">Custom Middleware</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="card rounded-lg p-10 text-center">
+        <p class="text-gray-600 text-xs mb-4"><span style="color:#00ff41;">#</span> ready.to.build()</p>
+        <h2 class="text-2xl font-black text-white mb-4">Need a secure API?</h2>
+        <p class="text-gray-600 text-sm mb-8">// Describe your use case — I'll tell you exactly what you need</p>
+        <a href="/contact"
+           class="px-10 py-4 text-sm font-black transition inline-block hover:opacity-90"
+           style="background:#00ff41; color:#0a0a0a;">
+            $ ./start_project
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}

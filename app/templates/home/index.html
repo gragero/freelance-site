@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Abo 7gag | From Nothing to All{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="min-h-screen flex flex-col justify-center px-8 md:px-24 py-20">
+    <p class="text-gray-600 text-xs tracking-widest uppercase mb-6">
+        <span style="color:#00ff41;">></span> status: available_for_work
+    </p>
+    <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6 text-white">
+        Your idea.<br>
+        My code.<br>
+        <span style="color:#00ff41;" class="cursor">From nothing to all</span>
+    </h1>
+    <p class="text-gray-500 text-sm md:text-base max-w-lg mb-10 leading-relaxed">
+        // I build fast, secure, and scalable web solutions<br>
+        // from full websites to powerful APIs
+    </p>
+    <div class="flex gap-4 flex-wrap">
+        <a href="/contact"
+           class="px-8 py-3 text-sm font-bold transition"
+           style="background:#00ff41; color:#0a0a0a;">
+            $ ./work_with_me
+        </a>
+        <a href="/portfolio"
+           class="px-8 py-3 text-sm font-bold border transition hover:border-green-400 hover:text-green-400"
+           style="border-color:#1a1a1a; color:#404040;">
+            $ ./see_my_work
+        </a>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="px-8 md:px-24 py-24">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> services.list()</p>
+    <h2 class="text-3xl font-black text-white mb-16">What I build</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <a href="/services/web-development" class="card rounded-lg p-8 group block">
+            <p class="text-xs text-gray-600 mb-4">01.</p>
+            <h3 class="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition">
+                Web Development
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Full websites built from scratch — fast, responsive, and ready to scale.
+            </p>
+            <p class="text-green-400 text-xs mt-6">→ learn more</p>
+        </a>
+
+        <a href="/services/api-development" class="card rounded-lg p-8 group block">
+            <p class="text-xs text-gray-600 mb-4">02.</p>
+            <h3 class="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition">
+                API Development
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Secure REST APIs with auth, rate limiting, and full documentation.
+            </p>
+            <p class="text-green-400 text-xs mt-6">→ learn more</p>
+        </a>
+
+        <a href="/services/translation" class="card rounded-lg p-8 group block">
+            <p class="text-xs text-gray-600 mb-4">03.</p>
+            <h3 class="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition">
+                Website Translation
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Take your website global — Arabic, English, Chinese, and Japanese.
+            </p>
+            <p class="text-green-400 text-xs mt-6">→ learn more</p>
+        </a>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="px-8 md:px-24 py-24 border-t border-gray-900">
+    <p class="text-gray-600 text-xs mb-2"><span style="color:#00ff41;">#</span> contact.init()</p>
+    <h2 class="text-4xl font-black text-white mb-4">Got a project?</h2>
+    <p class="text-gray-600 text-sm mb-8">Let's turn your idea into reality.</p>
+    <a href="/contact"
+       class="px-10 py-4 text-sm font-bold transition inline-block"
+       style="background:#00ff41; color:#0a0a0a;">
+        $ ./lets_talk
+    </a>
+</section>
+
+{% endblock %}

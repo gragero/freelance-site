@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Abo 7gag | From Nothing to All{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap');
+
+        * { font-family: 'JetBrains Mono', monospace; }
+
+        body { background-color: #0a0a0a; }
+
+        .green { color: #00ff41; }
+        .green-border { border-color: #00ff41; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .cursor::after {
+            content: '█';
+            color: #00ff41;
+            animation: blink 1s infinite;
+            margin-left: 4px;
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.03);
+            animation: scanline 8s linear infinite;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #00ff41; }
+
+        .card {
+            background: #111111;
+            border: 1px solid #1a1a1a;
+            transition: border-color 0.3s;
+        }
+        .card:hover { border-color: #00ff41; }
+    </style>
+</head>
+
+<script>
+function toggleServices() {
+    const dropdown = document.getElementById('services-dropdown');
+    dropdown.classList.toggle('hidden');
+}
+
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('services-menu');
+    if (!menu.contains(e.target)) {
+        document.getElementById('services-dropdown').classList.add('hidden');
+    }
+});
+</script>
+
+<body class="text-gray-300">
+
+    <!-- Scanline Effect -->
+    <div class="scanline"></div>
+
+    <!-- Navbar -->
+    <nav class="border-b border-gray-900 px-8 py-4 flex justify-between items-center sticky top-0 z-50" style="background:#0a0a0a;">
+        <a href="/" class="text-lg font-bold">
+            <span class="green">~</span>/abo7gag<span class="green">$</span>
+        </a>
+        <ul class="flex gap-8 text-sm text-gray-500">
+            <li><a href="/" class="hover:text-green-400 transition hover:green">./home</a></li>
+            <li class="relative" id="services-menu">
+    <span class="hover:text-green-400 transition cursor-pointer" onclick="toggleServices()">./services ▾</span>
+    <ul id="services-dropdown" class="absolute top-8 left-0 z-50 min-w-max hidden"
+        style="background:#0a0a0a; border:1px solid #1a1a1a;">
+        <li>
+            <a href="/services/web-development"
+               class="block px-6 py-3 text-xs hover:text-green-400 transition"
+               style="color:#404040;">
+                <span style="color:#00ff41;">></span> web_development
+            </a>
+        </li>
+        <li>
+            <a href="/services/api-development"
+               class="block px-6 py-3 text-xs hover:text-green-400 transition"
+               style="color:#404040; border-top:1px solid #1a1a1a;">
+                <span style="color:#00ff41;">></span> api_development
+            </a>
+        </li>
+        <li>
+            <a href="/services/translation"
+               class="block px-6 py-3 text-xs hover:text-green-400 transition"
+               style="color:#404040; border-top:1px solid #1a1a1a;">
+                <span style="color:#00ff41;">></span> translation
+            </a>
+        </li>
+    </ul>
+</li> 
+            <li><a href="/portfolio" class="hover:text-green-400 transition">./portfolio</a></li>
+            <li><a href="/consulting" class="hover:text-green-400 transition">./consulting</a></li>
+            <li><a href="/contact" class="hover:text-green-400 transition">./contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="px-8 py-3 text-sm font-mono
+                    {% if category == 'success' %} text-green-400 border-b border-green-900
+                    {% else %} text-red-400 border-b border-red-900 {% endif %}">
+                    > {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-900 px-8 py-6 text-center text-gray-700 text-xs">
+        <span class="green">></span> abo7gag@world:~$ echo "© 2026 — All rights reserved"
+    </footer>
+
+</body>
+</html>
