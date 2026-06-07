@@ -38,6 +38,7 @@ def index():
 
           <div style="margin-top:20px;">
             <p><strong>Name:</strong> {name}</p>
+            <p><strong>Email:</strong> {email}</p>
             <p><strong>Service:</strong> {service}</p>
           </div>
           <p><strong>Budget:</strong> {budget}</p>
