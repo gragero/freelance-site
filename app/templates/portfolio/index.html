@@ -15,124 +15,173 @@
 <section class="px-8 md:px-24 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
 
     <!-- OJclicks OS -->
-    <div class="card rounded-lg p-8">
-        <div class="flex justify-between items-start mb-4">
-            <p class="text-xs text-gray-600">01.</p>
+<div class="card rounded-lg p-8 project-soon-card" style="position:relative; overflow:hidden;">
+    <div class="flex justify-between items-start mb-4">
+        <p class="text-xs text-gray-600">01.</p>
+        <div class="flex items-center gap-3">
             <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">C · x86 ASM</span>
-        </div>
-        <h3 class="text-xl font-black text-white mb-3">OJclicks OS</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-            Custom bare-metal operating system built from scratch. Includes hardware abstraction layers, custom ISRs, PIC remap module, VGA text-mode driver, and full QEMU/GDB debug harness.
-        </p>
-        <div class="flex gap-3">
-            <a href="https://github.com/AboHgegA" target="_blank"
-               class="text-xs px-4 py-2 transition hover:text-green-400"
-               style="border:1px solid #1a1a1a; color:#404040;">
-                $ ./view_code
-            </a>
+            <span class="soon-badge">SOON</span>
         </div>
     </div>
+    <h3 class="text-xl font-black text-white mb-3">OJclicks OS</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+        Custom bare-metal operating system built from scratch. Includes hardware abstraction layers, custom ISRs, PIC remap module, VGA text-mode driver, and full QEMU/GDB debug harness.
+    </p>
+    <div class="progress-section">
+        <div class="progress-label">
+            <span>// build_progress</span>
+            <span style="color:#00ff41;">25%</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" data-target="25"></div>
+        </div>
+    </div>
+    <div class="flex gap-3 mt-6">
+        <a href="https://github.com/AboHgegA" target="_blank"
+           class="text-xs px-4 py-2 transition hover:text-green-400"
+           style="border:1px solid #1a1a1a; color:#404040;">
+            $ ./view_code
+        </a>
+    </div>
+</div>
 
-    <!-- ojcsh -->
-    <div class="card rounded-lg p-8">
-        <div class="flex justify-between items-start mb-4">
-            <p class="text-xs text-gray-600">02.</p>
+<!-- ojcsh -->
+<div class="card rounded-lg p-8">
+    <div class="flex justify-between items-start mb-4">
+        <p class="text-xs text-gray-600">02.</p>
+        <div class="flex items-center gap-3">
             <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">C · POSIX · AUR</span>
-        </div>
-        <h3 class="text-xl font-black text-white mb-3">ojcsh</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            High-performance POSIX-compliant Unix shell with multiprocess lifecycle management, tokenizing lexer, pipe architecture, and IPC pipeline structures.
-        </p>
-        <!-- Stats -->
-        <div class="flex gap-6 mb-6">
-            <div>
-                <p class="text-xs text-gray-600">releases</p>
-                <p class="text-xl font-black" style="color:#00ff41;">8</p>
-            </div>
-            <div>
-                <p class="text-xs text-gray-600">stars</p>
-                <p class="text-xl font-black" style="color:#00ff41;">5</p>
-            </div>
-            <div>
-                <p class="text-xs text-gray-600">forks</p>
-                <p class="text-xl font-black" style="color:#00ff41;">2</p>
-            </div>
-            <div>
-                <p class="text-xs text-gray-600">AUR downloads</p>
-                <p class="text-xl font-black" style="color:#00ff41;">+450</p>
-            </div>
-        </div>
-        <div class="flex gap-3">
-            <a href="https://github.com/gragero/OJC-shell" target="_blank"
-               class="text-xs px-4 py-2 transition hover:text-green-400"
-               style="border:1px solid #1a1a1a; color:#404040;">
-                $ ./view_code
-            </a>
-            <a href="https://aur.archlinux.org/account/abohgega" target="_blank"
-               class="text-xs px-4 py-2 transition hover:text-green-400"
-               style="border:1px solid #1a1a1a; color:#404040;">
-                $ ./view_aur
-            </a>
+            <span class="done-badge">DONE</span>
         </div>
     </div>
+    <h3 class="text-xl font-black text-white mb-3">ojcsh</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+        High-performance POSIX-compliant Unix shell with multiprocess lifecycle management, tokenizing lexer, pipe architecture, and IPC pipeline structures.
+    </p>
+    <div class="flex gap-6 mb-6">
+        <div>
+            <p class="text-xs text-gray-600">releases</p>
+            <p class="text-xl font-black" style="color:#00ff41;">8</p>
+        </div>
+        <div>
+            <p class="text-xs text-gray-600">stars</p>
+            <p class="text-xl font-black" style="color:#00ff41;">5</p>
+        </div>
+        <div>
+            <p class="text-xs text-gray-600">forks</p>
+            <p class="text-xl font-black" style="color:#00ff41;">2</p>
+        </div>
+        <div>
+            <p class="text-xs text-gray-600">AUR downloads</p>
+            <p class="text-xl font-black" style="color:#00ff41;">+450</p>
+        </div>
+    </div>
+    <div class="flex gap-3">
+        <a href="https://github.com/gragero/OJC-shell" target="_blank"
+           class="text-xs px-4 py-2 transition hover:text-green-400"
+           style="border:1px solid #1a1a1a; color:#404040;">
+            $ ./view_code
+        </a>
+        <a href="https://aur.archlinux.org/account/abohgega" target="_blank"
+           class="text-xs px-4 py-2 transition hover:text-green-400"
+           style="border:1px solid #1a1a1a; color:#404040;">
+            $ ./view_aur
+        </a>
+    </div>
+</div>
 
-    <!-- x86 Bootloader -->
-    <div class="card rounded-lg p-8">
-        <div class="flex justify-between items-start mb-4">
-            <p class="text-xs text-gray-600">03.</p>
+<!-- x86 Bootloader -->
+<div class="card rounded-lg p-8 project-soon-card" style="position:relative; overflow:hidden;">
+    <div class="flex justify-between items-start mb-4">
+        <p class="text-xs text-gray-600">03.</p>
+        <div class="flex items-center gap-3">
             <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">NASM · BIOS · x86</span>
-        </div>
-        <h3 class="text-xl font-black text-white mb-3">x86 Bare-Metal Bootloader</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-            Fully compliant 16-bit MBR bootloader within 512 bytes. Custom GDT, A20 line activation, Real Mode to Protected Mode transition, and long-jump pipeline flush into 32-bit execution.
-        </p>
-        <div class="flex gap-3">
-            <a href="https://github.com/AboHgegA" target="_blank"
-               class="text-xs px-4 py-2 transition hover:text-green-400"
-               style="border:1px solid #1a1a1a; color:#404040;">
-                $ ./view_code
-            </a>
+            <span class="soon-badge">SOON</span>
         </div>
     </div>
+    <h3 class="text-xl font-black text-white mb-3">x86 Bare-Metal Bootloader</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+        Fully compliant 16-bit MBR bootloader within 512 bytes. Custom GDT, A20 line activation, Real Mode to Protected Mode transition, and long-jump pipeline flush into 32-bit execution.
+    </p>
+    <div class="progress-section">
+        <div class="progress-label">
+            <span>// build_progress</span>
+            <span style="color:#00ff41;">30%</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" data-target="30"></div>
+        </div>
+    </div>
+    <div class="flex gap-3 mt-6">
+        <a href="https://github.com/AboHgegA" target="_blank"
+           class="text-xs px-4 py-2 transition hover:text-green-400"
+           style="border:1px solid #1a1a1a; color:#404040;">
+            $ ./view_code
+        </a>
+    </div>
+</div>
 
-    <!-- Shield/Sentinel -->
-    <div class="card rounded-lg p-8">
-        <div class="flex justify-between items-start mb-4">
-            <p class="text-xs text-gray-600">04.</p>
+        <!-- Shield/Sentinel -->
+<div class="card rounded-lg p-8 project-soon-card" style="position:relative; overflow:hidden;">
+    <div class="flex justify-between items-start mb-4">
+        <p class="text-xs text-gray-600">04.</p>
+        <div class="flex items-center gap-3">
             <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">Python · Flask · Security</span>
-        </div>
-        <h3 class="text-xl font-black text-white mb-3">Shield / Sentinel</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-            Intelligent web threat detection engine. Real-time brute-force detection, SQLi/XSS pattern matching, rate limiting, and async admin alert pipeline for anomalous IP behavior.
-        </p>
-        <div class="flex gap-3">
-            <a href="https://github.com/AboHgegA" target="_blank"
-               class="text-xs px-4 py-2 transition hover:text-green-400"
-               style="border:1px solid #1a1a1a; color:#404040;">
-                $ ./view_code
-            </a>
+            <span class="soon-badge">SOON</span>
         </div>
     </div>
+    <h3 class="text-xl font-black text-white mb-3">Shield / Sentinel</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+        Intelligent web threat detection engine. Real-time brute-force detection, SQLi/XSS pattern matching, rate limiting, and async admin alert pipeline for anomalous IP behavior.
+    </p>
+    <div class="progress-section">
+        <div class="progress-label">
+            <span>// build_progress</span>
+            <span style="color:#00ff41;">30%</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" data-target="30"></div>
+        </div>
+    </div>
+    <div class="flex gap-3 mt-6">
+        <a href="https://github.com/AboHgegA" target="_blank"
+           class="text-xs px-4 py-2 transition hover:text-green-400"
+           style="border:1px solid #1a1a1a; color:#404040;">
+            $ ./view_code
+        </a>
+    </div>
+</div>
 
-    <!-- Laravel API -->
-    <div class="card rounded-lg p-8 md:col-span-2">
-        <div class="flex justify-between items-start mb-4">
-            <p class="text-xs text-gray-600">05.</p>
+        <!-- Laravel API -->
+<div class="card rounded-lg p-8 md:col-span-2 project-soon-card" style="position:relative; overflow:hidden;">
+    <div class="flex justify-between items-start mb-4">
+        <p class="text-xs text-gray-600">05.</p>
+        <div class="flex items-center gap-3">
             <span class="text-xs px-2 py-1 rounded" style="background:#0a0a0a; color:#00ff41; border:1px solid #1a1a1a;">PHP · Laravel · Sanctum</span>
-        </div>
-        <h3 class="text-xl font-black text-white mb-3">Laravel Headless REST API</h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6 max-w-2xl">
-            Decoupled headless API engine with form request validation, eager-loading optimization, and transaction-safe migrations. Secured via Sanctum tokenized auth with middleware access restrictions and global exception tracking.
-        </p>
-        <div class="flex gap-3">
-            <a href="https://github.com/gragero" target="_blank"
-               class="text-xs px-4 py-2 transition hover:text-green-400"
-               style="border:1px solid #1a1a1a; color:#404040;">
-                $ ./view_code
-            </a>
+            <span class="soon-badge">SOON</span>
         </div>
     </div>
-
+    <h3 class="text-xl font-black text-white mb-3">Laravel Headless REST API</h3>
+    <p class="text-gray-600 text-sm leading-relaxed mb-6 max-w-2xl">
+        Decoupled headless API engine with form request validation, eager-loading optimization, and transaction-safe migrations. Secured via Sanctum tokenized auth with middleware access restrictions and global exception tracking.
+    </p>
+    <div class="progress-section" style="max-width:360px;">
+        <div class="progress-label">
+            <span>// build_progress</span>
+            <span id="laravel-label" style="color:#00ff41;">60%</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="laravel" data-target="60"></div>
+        </div>
+    </div>
+    <div class="flex gap-3 mt-6">
+        <a href="https://github.com/gragero" target="_blank"
+           class="text-xs px-4 py-2 transition hover:text-green-400"
+           style="border:1px solid #1a1a1a; color:#404040;">
+            $ ./view_code
+        </a>
+    </div>
+</div>
 </section>
 
 <!-- GitHub CTA -->
@@ -153,5 +202,97 @@
         </a>
     </div>
 </section>
+
+<style>
+.done-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid #1a3a1a;
+    background: #0a1a0a;
+    color: #00ff41;
+}
+.done-badge::before {
+    content: '✓ ';
+}
+.soon-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid #1f3a1f;
+    background: #0a1a0a;
+    color: #00ff41;
+    animation: pulse-badge 2.5s ease-in-out infinite;
+    transition: opacity 0.3s;
+}
+.soon-badge::before {
+    content: '▸ ';
+    opacity: 0.7;
+}
+@keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+}
+.progress-section {
+    margin-top: 16px;
+}
+.progress-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #2e2e2e;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.progress-bar-bg {
+    height: 2px;
+    background: #1a1a1a;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.progress-bar-fill {
+    height: 100%;
+    background: #00ff41;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+</style>
+
+<script>
+    const badges = document.querySelectorAll('.soon-badge');
+    const labels = ['SOON', 'UPCOMING', 'IN DEV', 'WIP'];
+    let idx = 0;
+
+    setInterval(() => {
+        idx = (idx + 1) % labels.length;
+        badges.forEach(b => {
+            b.style.opacity = '0';
+            setTimeout(() => {
+                b.textContent = labels[idx];
+                b.style.opacity = '1';
+            }, 300);
+        });
+    }, 3500);
+
+    const fills = document.querySelectorAll('.progress-bar-fill');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 200);
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fills.forEach(f => observer.observe(f));
+</script>
 
 {% endblock %}
